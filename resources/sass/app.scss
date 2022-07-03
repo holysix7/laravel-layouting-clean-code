@@ -1,0 +1,108 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .5s;
+}
+
+.fade-enter,
+.fade-leave-to
+
+/* .fade-leave-active below version 2.1.8 */
+    {
+    opacity: 0;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.vue-notif {
+    position: fixed !important;
+    top: 16px;
+    right: 16px;
+    z-index: 9999;
+}
+
+.card-title-icon {
+    font-size: 2.7em;
+    opacity: 0.5;
+}
+
+.vertical-stepper {
+    .step {
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        background-color: cream;
+    }
+
+    .v-stepper {
+        position: relative;
+        /*   visibility: visible; */
+    }
+
+    /* regular step */
+    .step .circle {
+        background-color: white;
+        border: 3px solid gray;
+        border-radius: 100%;
+        width: 20px;
+        /* +6 for border */
+        height: 20px;
+        display: inline-block;
+    }
+
+    .step .line {
+        top: 20px;
+        left: 9px;
+        /*   height: 120px; */
+        height: 100%;
+
+        position: absolute;
+        border-left: 3px solid gray;
+    }
+
+    .step.completed .circle {
+        visibility: visible;
+        background-color: rgb(6, 150, 215);
+        border-color: rgb(6, 150, 215);
+    }
+
+    .step.completed .line {
+        border-left: 3px solid rgb(6, 150, 215);
+    }
+
+    .step.active .circle {
+        visibility: visible;
+        border-color: rgb(6, 150, 215);
+    }
+
+    .step.empty .circle {
+        visibility: hidden;
+    }
+
+    .step.empty .line {
+        /*     visibility: hidden; */
+        /*   height: 150%; */
+        top: 0;
+        height: 150%;
+    }
+
+    .step:last-child .line {
+        visibility: hidden;
+    }
+
+    .content {
+        margin-left: 20px;
+        display: inline-block;
+    }
+}
